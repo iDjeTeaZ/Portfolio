@@ -29,7 +29,7 @@
   <!-- ======= Header/ Navbar ======= -->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Portfolio</a>
+      <a class="navbar-brand js-scroll" href="index.html">Portfolio</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -104,7 +104,45 @@
         <div class="portfolio-description">
           <h2>Description du cours</h2>
           <p>
-            Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+            Durant ce cours, nous avons été initiés au mouvement Software Craftsmanship et aux pratiques qui lui sont associées, au Clean Code et à l'Atelier craft, aux différents types de teste et à la couverture de code, ainsi qu'au TDD. 
+            <br><br>
+            Afin d'introduire le sujet, l'intervenant a mis en avant des statistiques expliquant que les développeurs consacrent 42% de leur temps à de la maintenance de code, ce qui peut engendrer du découragement, de la lenteur, une perte de créativité ainsi qu'une érosion des compétences.
+            Ce qui implique la dette technique, qui augmente à cause de plusieurs choses : la quantité de règles, les tehcnologies en continuelle évolution, les urgences et la pression sur les délais de livraison, hétérogénéité  des profils dans les équipes de développement, le manque d'attention, l'organisation, et le manque de diffusion des bonnes pratiques.
+            En fonction de l'approche de l'équipe, la dette technique peut évoluer différemment : l'approche dite "on verra plus tard" qui vise la quantité livrée à chaque deadline, inclue très souvent un code de mauvaise qualité et qui augmente ainsi la dette technique; l'approche "on fait pas n'importe quoi" qui vise la qualité du code livré, mais qui réduit drastiquement la quantité livrée en un temps limité. 
+            <br>
+            C'est en cherchant à régler ces problèmes, que le Software Craftsmanship est intéressant, en mettant en avant : la responsabilité, l'autonomie, l'amélioration continuen l'échange et le partage, et surtout la satisfaction du client. 
+            Afin de satisfaire le client, différentes pratiques sont des ponts vers la réussite pour une bonne livraison : Scrum/Kanban, CI/CD, Pair programming, Code review, Ateliers craft, ...
+            Ces pratiques sont regroupées en fonction de leur axe d'amélioration : la gestion de projet, le développment, la montée en compétence et le déploiement.
+            <br><br>
+            Ensuite nous avons découvert la pratique du Clean Code :
+            <ul>
+              <li>le Formatage, garder les composants petits, aérer le code, et si le code est dense veiller à garder une cohérence entre des éléments liés, des déclarations doivent être logiques;</li>
+              <li>le Nommage, nom doit réléver l'intention, les termes longs ne sont pas des problèmes, noms en lien avec le domaine métier, éviter les MagicStrings et les MagicNumbers, un nom pour chaque concept de fonctionnalité, respecter les conventions entres développeurs;</li>
+              <li>les Fonctions, une seule intention par fonction, un seul niveau d'abstraction, éviter les duplications de code, pas d'effet de bord cachés, pas modifier les paramètres, privilégier les fonctions pures, pas trop de paramètres par fonction (s'ils viennent du même domaine, les regrouper dans un objet);</li>
+              <li>la Gestion d'erreur, privilégier le gestion des exceptions aux codes d'erreur, sortir les try/catch en dehors des fonctions de traitement en faisant une fonction de gestion eds exceptions;</li>
+              <li>les Classes, le principe de Single Responsibility, la cohérence des variables et par rapport aux fonctions, couplage en évitant les connexion entre les classes, préférer plusieurs petites classes qu'une grosse classe;</li>
+              <li>les Commentaires, en général c'est une mauvaise pratique, il faut les déplacer et les faire évoluer avec le code, ce qui explique qu'ils soient souvent des mensonges (comme les commentaires sont les mêmes qu'à leur première rédaction), un concept et un nom bien choisi à la base évitent souvent le besoin de commentaires;</li>
+              <li>les Linters, qui ont pour objectif de détecter automatiquement les Code Smells (qui sont les éléments des mauvaises pratiques), comme SonarQube.</li>
+            </ul>
+            <br><br>
+            Ensuite, nous avons étudié les aspects importants des test. Il en est donc ressorti que les tests améliorent la confiance qu'on a dans le logiciel, qu'ils permettent de détecter les régressions, et d'assurer la "qualité" du logiciel. 
+            Le principe de base est d'effectuer une série d'actions précises sur le logiciel, en comparant l'état et les résultats observés avec les valeurs attendues, si ce sont les mêmes alors le test est passant, sinon il est non passant.
+            Il existe différents types de test en fonction du nombre de test qu'ils demandent ainsi que du coût et de la précision, de la fiabilité et de la rapidité du test : 
+            <ul>
+              <li>les test IHM, et les tests bout en bout;</li>
+              <li>les tests d'intégration;</li>
+              <li>les test unitaires.</li>
+            </ul>
+            Avec des outils indicateurs de tests qui permettent d'effectuer de la couverture de code afin d'avoir une vision sur l'ensemble du code qui est testé et comment il a été testé, cependant une bonne couverture de test ne veut pas dire que le code est bien testé. 
+            <br><br>
+            Pour finir ce cours, l'intervenant nous a initié au Test Driven Development (TDD), qui implique plusieurs éléments :
+            <ul>
+              <li>la conception par spécification;</li>
+              <li>le code testable;</li>
+              <li>la documentation vivante;</li>
+              <li>permettre le refactoring;</li>
+              <li>découper l'attention.</li>
+            </ul>
           </p>
         </div>
       </div>
