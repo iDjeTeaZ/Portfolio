@@ -112,6 +112,23 @@
             <br>
             Elasticsearch est un moteur de recherche et d'analyse RESTful distribué dans lequel tous les champs sont indexés. Il permet de centraliser le stockage des données et assure une recherche rapide, une grande pertinance et des analyses aussi puissantes que scalables sur des centaines de serveurs.
             Elasticsearch a été créé en en 2010 par Shay Banon. Il est basé sur Apache Lucene. Lucene est une librairie Java d'indexation et de recherche très puissante, très complexe et exposant peu de fonctionnalités haut niveau. L'entreprise qui développe cet outil et fourni formations, conférences, produits annexex, webinar et support est Elastic (ElasticSearch BV). Il existe une suite de logiciel payants qui sont : X-pack, Elastic Cloud et ECE, Search as A Platform.
+            <br><br>
+            Composition d'un Cluster
+            <br>
+            Un document est structuré comme un objet JSON et appartient à un type qui définit sa structure.
+            Un shard est une instance de Lucene contenant les documents. Il existe deux types de shards: Primary et Replica. Un Primary Shard est une partition de l'index. Le Replica Shard est une copie du Primary Shard.
+            Un index est un espace de stockage de documents de même type qui contient les shards. Il est découpé sur un ou plusieurs Primary Shards. Il peut être répliqué sur zéro ou plusieurs Replica Shards.
+            Un node est une instance d'Elasticsearch en cours d'exécution. Un cluster est un ensemble de nodes. Parmis tous les nodes présant dans le cluster, un est élu automatiquement master. Le noeud master est responsable des opérations à l'échelle du cluster (ajout et supression d'index, gestion des noeuds, etc.). Tous les nodes savent faire toutes les opérations, ce qui permet de remplacer le node master rapidement en cas de défaillance.
+            <br><br>
+            Kibana
+            <br>
+            Kibana permet la recherche, la visualisation et l'interaction de données indexées dans Elasticsearch. C'est une application front-end open-source et gratuite. Kibana est constitué d'un tableau de bord permettant l'affichage d'une vue analytique en temps réel sur de grands volumes de données.
+            <br><br>
+            Cerebro
+            <br>
+            Cerebro est un outil d'administration Web permettant la gestion de Clusters. C'est un outil open-source. Cerebro permet de visualiser l'ensemble des noeuds en montrant des informations représentant l'usage de la mémoire, de l'espace disque, du cpu et du load average.
+            Dans Cerebro, il existe trois statuts possibles représentés par un code couleur. Vert: tous les shards sont actifs, Jaune: tous les shars sont actifs mais certains Replica Shards sont manquants ou non assignés, Rouge: un ou plusieurs Primary Shards sont inactifs.
+            Lorsque un node est ajouté, on peut observer dans Cerebro que les shards se repartissent automatiquement. On peut également observer que le CPU et la RAM de chaque node sont utilisés par moins de shards et donc que les preformances sont meilleures.
           </p>
         </div>
       </div>
